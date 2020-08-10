@@ -14,6 +14,7 @@ class Student < InteractiveRecord
     else
       sql = "SELECT * FROM #{self.table_name} WHERE grade = ?"
       DB[:conn].execute(sql, grade.to_s)
+    end
   end
 
 end
