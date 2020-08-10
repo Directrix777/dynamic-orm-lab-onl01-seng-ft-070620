@@ -9,5 +9,7 @@ class Student < InteractiveRecord
   end
 
   def self.find_by(name: nil, grade: nil)
+    if name
+  end
 
 end
