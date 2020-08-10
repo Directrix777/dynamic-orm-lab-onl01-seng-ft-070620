@@ -13,7 +13,7 @@ class Student < InteractiveRecord
       self.find_by_name(name)
     else
       sql = "SELECT * FROM #{self.table_name} WHERE grade = ?"
-      DB[:conn].execute(sql, grade)
+      DB[:conn].execute(sql, grade.to_s)
   end
 
 end
